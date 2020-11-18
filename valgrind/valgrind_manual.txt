@@ -1,0 +1,16 @@
+1) Скомпилировать программу и создать исполняемый файл, например:
+    gcc prog.c -o prog
+2) запустить valgrind с нужными параметрами и пути к файлу:
+    valgrind --tool=memcheck ./prog
+Далее просто работать как с обычным исполняемым файлом, проверяя чиститься ли память, где нужно.
+
+На linux проблем с установкой valgrind стандартным образом быть не должно, на mac os catalina хороший гайд: https://stackoverflow.com/questions/58360093/how-to-install-valgrind-on-macos-catalina-10-15-with-homebrew 
+
+При установленом brew это делается в терминале в 2 строки
+brew tap LouisBrunner/valgrind
+brew install --HEAD LouisBrunner/valgrind/valgrind
+
+Как установить Homebrew на mac есть очень много гайдов с видео, которые просто гуглятся.
+
+Для тех, у кого windows: rip
+Ну есть виртуалка, докер и WSL.
